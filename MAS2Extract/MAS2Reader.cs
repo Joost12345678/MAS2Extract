@@ -70,7 +70,7 @@ namespace MAS2Extract
         {
             var fileTypeBytes = Reader.ReadBytes(16);
             var fileTypeString = DecodeFileFormatHeader(fileTypeBytes).Replace('\0',' ').Trim();
-            if (fileTypeString == "GMOTOR_MAS_2.90")
+            if (fileTypeString == "LMU100_MAS_2.90")
             {
                 Salt = Reader.ReadBytes(8);
                 Saltkey = BitConverter.ToUInt32(Salt, 0);
